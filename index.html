@@ -121,25 +121,6 @@
             max-width: 400px;
         }
 
-        /* header-video now unused, but harmless if kept
-        .header-video {
-            position: relative;
-            width: 100%;
-            max-width: 400px;
-            margin-left: auto;
-            margin-bottom: 10px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .header-video video {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-        */
-
         .animate-text {
             font-size: 0.85rem;
             white-space: nowrap;
@@ -159,6 +140,7 @@
             0% {
                 transform: translateX(-100%);
             }
+
             100% {
                 transform: translateX(100%);
             }
@@ -231,75 +213,72 @@
 </head>
 
 <body>
-<!-- Top Profile / Hero -->
-<div class="container profile-section">
-    <div class="profile-section-left">
-        <img src="photo/image4.jpg" alt="Naol D. Dejene" />
-        <div class="profile-details">
-            <h2 class="mb-1">Naol Dessalegn Dejene, PhD</h2>
+    <!-- Top Profile / Hero -->
+    <div class="container profile-section">
+        <div class="profile-section-left">
+            <img src="photo/image4.jpg" alt="Naol D. Dejene" />
+            <div class="profile-details">
+                <h2 class="mb-1">Naol Dessalegn Dejene, PhD</h2>
 
-            <div class="headline-role">
-               Mechanical Engineer &amp; Researcher
-            </div>
+                <div class="headline-role">
+                    Mechanical Engineer &amp; Researcher
+                </div>
 
-            <div class="current-role">
-                Postdoctoral Researcher, Metal Additive Manufacturing Pusan National University, South Korea
-            </div>
+                <div class="current-role">
+                    Postdoctoral Researcher, Metal Additive Manufacturing, Pusan National University, South Korea
+                </div>
 
-            <div class="headline-tagline">
-                Laser Powder Bed Fusion · Laser Cladding / DED · Machine Learning for process, optimization, prediction and Real-time monitoring
-            </div>
+                <div class="headline-tagline">
+                    Laser Powder Bed Fusion · Laser Cladding / DED · Machine Learning for process optimization, prediction and real-time monitoring
+                </div>
 
-            <ul class="mt-2">
-                <li>
-                    Postdoctoral Researcher in Additive Manufacturing,
-                    <a href="https://www.pusan.ac.kr/" target="_blank">
-                        Pusan National University, South Korea
+                <ul class="mt-2">
+                    <li>
+                        Postdoctoral Researcher in Additive Manufacturing,
+                        <a href="https://www.pusan.ac.kr/" target="_blank">
+                            Pusan National University, South Korea
+                        </a>
+                    </li>
+                    <li>
+                        PhD in Offshore Technology (Structural &amp; Mechanical Engineering),
+                        <a href="https://www.uis.no/" target="_blank">
+                            University of Stavanger, Norway
+                        </a>
+                    </li>
+                    <li>
+                        MSc in Manufacturing Engineering,
+                        <a href="https://www.astu.edu.et/" target="_blank">
+                            Adama Science and Technology University, Ethiopia
+                        </a>
+                    </li>
+                    <li>
+                        BSc in Mechanical Engineering,
+                        <a href="https://www.aau.edu.et/" target="_blank">
+                            Addis Ababa University, Ethiopia
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="meta-links">
+                    <a href="mailto:naol.mech2013@gmail.com">naol.mech2013@gmail.com</a> |
+                    <a href="mailto:naol.dejene@pusan.ac.kr">naol.dejene@pusan.ac.kr</a><br />
+                    <a href="https://orcid.org/0000-0001-5949-8243" target="_blank">ORCID</a> |
+                    <a href="https://www.linkedin.com/in/naoldessalegncontact1" target="_blank">LinkedIn</a> |
+                    <a href="https://scholar.google.com/citations?user=c89CbOYAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+                    <a href="https://www.researchgate.net/profile/Naol-Dejene" target="_blank">ResearchGate</a>
+                </div>
+
+                <div class="mt-3">
+                    <a href="#collaborations" class="btn btn-sm btn-primary btn-cta"
+                        onclick="showSection('collaborations'); return false;">
+                        Open to research &amp; industry collaborations
                     </a>
-                </li>
-                <li>
-                    PhD in Offshore Technology (Structural &amp; Mechanical Engineering),
-                    <a href="https://www.uis.no/" target="_blank">
-                        University of Stavanger, Norway
-                    </a>
-                </li>
-                <li>
-                    MSc in Manufacturing Engineering,
-                    <a href="https://www.astu.edu.et/" target="_blank">
-                        Adama Science and Technology University, Ethiopia
-                    </a>
-                </li>
-                <li>
-                    BSc in Mechanical Engineering,
-                    <a href="https://www.aau.edu.et/" target="_blank">
-                        Addis Ababa University, Ethiopia
-                    </a>
-                </li>
-            </ul>
-
-            <div class="meta-links">
-                <a href="mailto:naol.mech2013@gmail.com">naol.mech2013@gmail.com</a> |
-                <a href="mailto:naol.dejene@pusan.ac.kr">naol.dejene@pusan.ac.kr</a><br />
-                <a href="https://orcid.org/0000-0001-5949-8243" target="_blank">ORCID</a> |
-                <a href="https://www.linkedin.com/in/naoldessalegncontact1" target="_blank">LinkedIn</a> |
-                <a href="https://scholar.google.com/citations?user=c89CbOYAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-                <a href="https://www.researchgate.net/profile/Naol-Dejene" target="_blank">ResearchGate</a>
+                </div>
             </div>
-
-            <div class="mt-3">
-                <a href="#collaborations" class="btn btn-sm btn-primary btn-cta" 
-                   onclick="showSection('collaborations'); return false;">
-                    Open to research &amp; industry collaborations
-                </a>
-            </div>
-
         </div>
-    </div>
-</div>
-
 
         <div class="profile-section-right">
-            <!-- Video removed, only keep animated text slogan -->
+            <!-- Animated tagline -->
             <div class="animate-text">
                 <span>Advancing metal additive manufacturing through research, data, and innovation.</span>
             </div>
@@ -310,15 +289,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home" onclick="showSection('home'); return false;">Naol D. Dejene</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -348,7 +320,7 @@
                         <a class="nav-link" href="#skills" onclick="showSection('skills', this); return false;">Skills</a>
                     </li>
                     <li class="nav-item px-1">
-                        <a class="nav-link" href="#awards" onclick="showSection('awards', this); return false;">Awards</a>
+                        <a class="nav-link" href="#honors" onclick="showSection('honors', this); return false;">Honors</a>
                     </li>
                     <li class="nav-item px-1">
                         <a class="nav-link" href="#training" onclick="showSection('training', this); return false;">Training</a>
@@ -386,7 +358,7 @@
             <p style="text-align: justify;">
                 I collaborate with academic and industrial partners to develop
                 <strong>robust process windows</strong>, <strong>intelligent monitoring
-                strategies</strong>, and <strong>surface engineering solutions</strong>
+                    strategies</strong>, and <strong>surface engineering solutions</strong>
                 that enable the next generation of metal additive manufacturing.
             </p>
         </div>
@@ -405,7 +377,7 @@
                 <li>Process–structure–property relationships in L-PBF and DED/laser cladding.</li>
                 <li>Control of surface roughness, porosity, and microstructure in metal AM parts.</li>
                 <li>Machine learning models for predicting surface and mechanical properties.</li>
-                 <li>Physics informed machine learning models for predicting Quality of Metal Additive Manufacturing</li>
+                <li>Physics informed machine learning models for predicting quality of metal additive manufacturing.</li>
                 <li>Development of surface-hardening and corrosion-resistant coatings for industrial applications.</li>
                 <li>Sustainable AM strategies, including efficient powder usage and energy-aware processing.</li>
             </ul>
@@ -418,32 +390,32 @@
             <h2 class="section-title mb-3"><em>Publications</em></h2>
             <p>Selected journal and conference publications:</p>
             <ol>
-            <li>
-              <strong>Dejene, N.D.</strong>, & Efa, D.A. (2025). 
-              Bottom-up optimization of additive manufacturing: Process–structure–property relationships in laser powder bed fusion. 
-               <em>Results in Materials</em>, 100832.
-              <a href="https://doi.org/10.1016/j.rinma.2025.100832" target="_blank">
-             https://doi.org/10.1016/j.rinma.2025.100832
-              </a>
-            </li> 
-                 <li>
-               Efa, D.A., Ifa, D.A., <strong>Dejene, N.D.</strong>, Belachew, H.Z., & Tegegn, D.F. (2025).
-               Sol–gel and co-precipitation synthesized hybrid nanofluids for enhanced CNC turning of AISI 4340 steel: 
-               an experimental and machine learning approach. <em>Scientific Reports</em>.
-                <a href="https://doi.org/10.1038/s41598-025-25102-4" target="_blank">
-                https://doi.org/10.1038/s41598-025-25102-4
-                 </a>
+                <li>
+                    <strong>Dejene, N.D.</strong>, &amp; Efa, D.A. (2025).
+                    Bottom-up optimization of additive manufacturing: Process–structure–property relationships in laser powder bed fusion.
+                    <em>Results in Materials</em>, 100832.
+                    <a href="https://doi.org/10.1016/j.rinma.2025.100832" target="_blank">
+                        https://doi.org/10.1016/j.rinma.2025.100832
+                    </a>
                 </li>
                 <li>
-                  Sololo, K.N., <strong>Dejene, N.D.</strong>, Efa, D.A., Negari, D.T., Ifa, D.A., & Kumar, D.H. (2025).
-                   Clean energy demand in Industry 4.0: Trends, challenges, and opportunities.<em>Results in Engineering</em>, 107260.
-                     <a href="https://doi.org/10.1016/j.rineng.2025.107260" target="_blank">
-                      https://doi.org/10.1016/j.rineng.2025.107260
-                      </a>
-                 </li>
-              
+                    Efa, D.A., Ifa, D.A., <strong>Dejene, N.D.</strong>, Belachew, H.Z., &amp; Tegegn, D.F. (2025).
+                    Sol–gel and co-precipitation synthesized hybrid nanofluids for enhanced CNC turning of AISI 4340 steel:
+                    an experimental and machine learning approach. <em>Scientific Reports</em>.
+                    <a href="https://doi.org/10.1038/s41598-025-25102-4" target="_blank">
+                        https://doi.org/10.1038/s41598-025-25102-4
+                    </a>
+                </li>
                 <li>
-                    Efa, D.A., Ifa, D.A., <strong>Dejene, N.D.</strong> (2025).
+                    Sololo, K.N., <strong>Dejene, N.D.</strong>, Efa, D.A., Negari, D.T., Ifa, D.A., &amp; Kumar, D.H. (2025).
+                    Clean energy demand in Industry 4.0: Trends, challenges, and opportunities.
+                    <em>Results in Engineering</em>, 107260.
+                    <a href="https://doi.org/10.1016/j.rineng.2025.107260" target="_blank">
+                        https://doi.org/10.1016/j.rineng.2025.107260
+                    </a>
+                </li>
+                <li>
+                    Efa, D.A., <strong>Dejene, N.D.</strong>, Ifa, D.A. (2025).
                     Computational design of hybrid metamaterials: Optimized topology and lattice infill for
                     complex multi-geometric structures. <em>Next Research</em>, 100449.
                     <a href="https://doi.org/10.1016/j.nexres.2025.100449" target="_blank">
@@ -458,12 +430,11 @@
                         https://doi.org/10.1016/j.nxmate.2025.100999
                     </a>
                 </li>
-
                 <li>
                     Efa, D.A., <strong>Dejene, N.D.</strong>, Ifa, D.A., Nemomsa, S.K., Gemechu, T.B. (2025).
                     Improving computer numerical control (CNC) performance of AISI D2 steel with nanofluid
                     composites and advanced machine learning techniques. <em>International Journal of Advanced
-                    Manufacturing Technology</em>, 1–29.
+                        Manufacturing Technology</em>, 1–29.
                     <a href="https://doi.org/10.1007/s00170-025-15536-5" target="_blank">
                         https://doi.org/10.1007/s00170-025-15536-5
                     </a>
@@ -477,7 +448,7 @@
                         https://doi.org/10.3390/jmmp9030078
                     </a>
                 </li>
-                                <li>
+                <li>
                     <strong>Dejene, N.D.</strong>, Lemu, H.G. (2024).
                     Characterisation and prediction of mechanical properties in laser powder bed fusion-printed
                     parts: a comparative analysis using machine learning. <em>Materials Technology</em>, 39(1):2419228.
@@ -485,15 +456,14 @@
                         https://doi.org/10.1080/10667857.2024.2419228
                     </a>
                 </li>
-               
-                 <li>
+                <li>
                     <strong>Dejene, N.D.</strong>, Lemu, H.G., Gutema, E.M. (2024).
                     Effects of process parameters on the surface characteristics of laser powder bed fusion
                     printed parts. <em>International Journal of Advanced Manufacturing Technology</em>, 133(11):5611–5625.
                     <a href="https://doi.org/10.1007/s00170-024-14087-5" target="_blank">
                         https://doi.org/10.1007/s00170-024-14087-5
                     </a>
-
+                </li>
                 <li>
                     <strong>Dejene, N.D.</strong>, Lemu, H.G. (2023).
                     Current status and challenges of powder bed fusion-based metal additive manufacturing:
@@ -536,9 +506,11 @@
                     </a>
                 </li>
                 <li>
-                    Raja, K., Naiju, C.D., Kumar, S.M., & <strong>Dessalegn, N.</strong> (2021). Investigations on the wear rate properties of 3D printed carbon fiber reinforced PLA.
-                   <em>SAE Technical Paper</em>, 2021-28-0239, 1–8. <a href="https://doi.org/10.4271/2021-28-0239" target="_blank">
-                     https://doi.org/10.4271/2021-28-0239
+                    Raja, K., Naiju, C.D., Kumar, S.M., &amp; <strong>Dessalegn, N.</strong> (2021).
+                    Investigations on the wear rate properties of 3D printed carbon fiber reinforced PLA.
+                    <em>SAE Technical Paper</em>, 2021-28-0239, 1–8.
+                    <a href="https://doi.org/10.4271/2021-28-0239" target="_blank">
+                        https://doi.org/10.4271/2021-28-0239
                     </a>
                 </li>
             </ol>
@@ -558,7 +530,7 @@
                     <li>Conducting research on advanced DED cladding for high-performance applications.</li>
                     <li>Mentoring MSc students in DED additive manufacturing.</li>
                     <li>Co-supervising PhD students on PBF additive manufacturing projects.</li>
-                    <li>Working projects on surface-hardening cladding in collaboration with industry.</li>
+                    <li>Working on surface-hardening cladding projects in collaboration with industry.</li>
                 </ul>
             </div>
 
@@ -568,7 +540,7 @@
                 <div class="experience-time">Jan 2025 – Jul 2025</div>
                 <ul>
                     <li>Delivered MSc-level courses in Fundamentals of Additive Manufacturing and Advanced Welding Technology.</li>
-                    <li>Supervised MSc research projects in additive manufacturing and Welding.</li>
+                    <li>Supervised MSc research projects in additive manufacturing and welding.</li>
                 </ul>
             </div>
 
@@ -579,7 +551,7 @@
                 <ul>
                     <li>Developed and optimized L-PBF process parameters for enhanced part quality.</li>
                     <li>Performed tensile, hardness, surface roughness and fatigue testing of AM components.</li>
-                    <li>Applied Machine Learning models for surface and mechanical property prediction.</li>
+                    <li>Applied machine learning models for surface and mechanical property prediction.</li>
                     <li>Collaborated with industry partners on AM process optimization.</li>
                     <li>Co-mentored MSc students on AM-related research.</li>
                 </ul>
@@ -606,7 +578,7 @@
                     <li>Improved system reliability for packaging and cooling lines.</li>
                 </ul>
             </div>
-        
+        </div>
     </section>
 
     <!-- COLLABORATIONS & OPPORTUNITIES -->
@@ -734,10 +706,10 @@
         </div>
     </section>
 
-    <!-- Honors -->
+    <!-- HONORS -->
     <section id="honors" class="content-section bg-light">
         <div class="container">
-            <h2 class="section-title mb-3"><em> Honors</em></h2>
+            <h2 class="section-title mb-3"><em>Honors</em></h2>
             <ul>
                 <li>Governmental tuition fee waiver, MSc, Adama Science and Technology University, Ethiopia.</li>
                 <li>INDMET Project Scholarship, PhD, University of Stavanger, Norway.</li>
@@ -760,7 +732,7 @@
                 <li>English – Fluent</li>
                 <li>Afaan Oromo – Native</li>
                 <li>Amharic – Very good</li>
-                <li>Norwegian – A1  (improving)</li>
+                <li>Norwegian – A1 (improving)</li>
             </ul>
         </div>
     </section>
@@ -822,12 +794,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
