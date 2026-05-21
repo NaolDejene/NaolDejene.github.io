@@ -550,20 +550,32 @@
 
         .event-media {
             width: 100%;
-            max-width: 520px;
             border-radius: 14px;
             overflow: hidden;
             border: 1px solid #d9e4f2;
-            background: #f7fbff;
+            background: #ffffff;
             box-shadow: 0 10px 24px rgba(7, 33, 66, 0.06);
+        }
+
+        .event-media.banner {
+            max-width: 920px;
+        }
+
+        .event-media.photo {
+            max-width: 680px;
         }
 
         .event-media img {
             display: block;
             width: 100%;
             height: auto;
-            max-height: 230px;
-            object-fit: cover;
+            object-fit: contain;
+            image-rendering: auto;
+        }
+
+        .event-media a {
+            display: block;
+            cursor: zoom-in;
         }
 
         .event-media-caption {
@@ -1094,9 +1106,9 @@
                                         <span class="badge-soft">Invited Speaker</span>
                                         <div class="pub-meta mt-1">Planned topic: foundation models and African community challenges.</div>
                                     </div>
-                                    <div class="event-media">
-                                        <img src="Events/act-africa-2026-banner.jpg" alt="ACT-Africa 2026 banner" onerror="this.closest('.event-media').style.display='none'" />
-                                        <div class="event-media-caption">Optional event brochure, banner, or conference photo.</div>
+                                    <div class="event-media banner">
+                                        <a href="Events/act-africa-2026-banner.png" target="_blank" rel="noopener"><img src="Events/act-africa-2026-banner.png" alt="ACT-Africa 2026 banner" onerror="this.closest('.event-media').style.display='none'" /></a>
+                                        <div class="event-media-caption">Event banner / brochure — click to view larger</div>
                                     </div>
                                 </div>
                             </div>
@@ -1110,9 +1122,9 @@
                                         <span class="badge-soft">Presenter</span>
                                         <div class="pub-meta mt-1">Presented: “Machine-Learning-Enabled Energy-Density Mapping for Surface Roughness Prediction in L-PBF AlSi10Mg”.</div>
                                     </div>
-                                    <div class="event-media">
-                                        <img src="Events/ksmpe-2025-banner.jpg" alt="Korean Society of Manufacturing Process Engineers event banner" onerror="this.closest('.event-media').style.display='none'" />
-                                        <div class="event-media-caption">Optional event brochure, banner, or presentation photo.</div>
+                                    <div class="event-media photo">
+                                        <a href="Events/ksmpe-2025-banner.jpg" target="_blank" rel="noopener"><img src="Events/ksmpe-2025-banner.jpg" alt="Korean Society of Manufacturing Process Engineers event banner" onerror="this.closest('.event-media').style.display='none'" /></a>
+                                        <div class="event-media-caption">Event banner / presentation photo — click to view larger</div>
                                     </div>
                                 </div>
                             </div>
@@ -1126,9 +1138,9 @@
                                         <span class="badge-soft">Presenter</span>
                                         <div class="pub-meta mt-1">Presented: “Comparative analysis of artificial neural network model and analysis of variance for predicting defect formation in plastic injection moulding processes”.</div>
                                     </div>
-                                    <div class="event-media">
-                                        <img src="Events/cotech-2023-banner.jpg" alt="COTech 2023 event brochure or banner" onerror="this.closest('.event-media').style.display='none'" />
-                                        <div class="event-media-caption">Optional event brochure, banner, or conference image.</div>
+                                    <div class="event-media photo">
+                                        <a href="Events/cotech-2023-banner.jpg" target="_blank" rel="noopener"><img src="Events/cotech-2023-banner.jpg" alt="COTech 2023 event brochure or banner" onerror="this.closest('.event-media').style.display='none'" /></a>
+                                        <div class="event-media-caption">Event brochure / conference image — click to view larger</div>
                                     </div>
                                 </div>
                             </div>
