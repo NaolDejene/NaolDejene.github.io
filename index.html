@@ -13,9 +13,9 @@
     <title>Naol Dessalegn Dejene, PhD — Metal Additive Manufacturing &amp; Machine Learning</title>
 
     <meta name="description"
-        content="Naol Dessalegn Dejene, PhD — Postdoctoral Researcher at Pusan National University working on metal additive manufacturing (L-PBF, DED), machine learning for process–structure–property prediction, and sustainable manufacturing." />
+        content="Naol Dessalegn Dejene, PhD — Postdoctoral Researcher at Pusan National University working on metal additive manufacturing (L-PBF, DED, WAAM), machine learning for process–structure–property prediction, and sustainable manufacturing." />
     <meta name="keywords"
-        content="Naol Dessalegn Dejene, Naol Dejene, metal additive manufacturing, L-PBF, DED, laser powder bed fusion, directed energy deposition, machine learning, process-structure-property, AlSi10Mg, Inconel 625, postdoctoral researcher, Pusan National University, University of Stavanger" />
+        content="Naol Dessalegn Dejene, Naol Dejene, metal additive manufacturing, L-PBF, DED, WAAM, laser powder bed fusion, directed energy deposition, machine learning, process-structure-property, AlSi10Mg, Inconel 625, postdoctoral researcher, Pusan National University, University of Stavanger" />
     <meta name="author" content="Naol Dessalegn Dejene" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://example.com/" />
@@ -737,6 +737,85 @@
             letter-spacing: 0.06em;
         }
 
+        .stat-source {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.66rem;
+            font-weight: 400;
+            color: var(--ink-muted);
+            text-transform: none;
+            letter-spacing: 0.02em;
+            opacity: 0.75;
+        }
+
+        .stat-card .is-loading {
+            color: var(--ink-muted);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card .is-loading::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(29, 78, 216, 0.1),
+                transparent
+            );
+            animation: shimmer 1.4s infinite;
+        }
+
+        @keyframes shimmer {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
+
+        .citations-note {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: -8px 0 22px;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            background: var(--paper-warm);
+            border: 1px solid var(--rule-soft);
+            color: var(--ink-muted);
+            font-size: 0.82rem;
+            font-family: var(--font-mono);
+        }
+
+        .citations-note i { color: var(--accent); flex-shrink: 0; }
+        .citations-note a { color: var(--accent); }
+
+        .citation-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: 10px;
+            padding: 2px 9px;
+            border-radius: var(--radius-pill);
+            background: linear-gradient(135deg, var(--accent-soft), #c7d4ee);
+            color: var(--accent-deep);
+            border: 1px solid #b8c8e8;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            vertical-align: middle;
+            opacity: 0;
+            transform: translateY(-2px);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        .citation-badge.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .citation-badge i { font-size: 0.78rem; }
+
         /* ========================================================
            FOCUS / RESEARCH CARDS
         ======================================================== */
@@ -1300,8 +1379,8 @@
         <aside class="sidebar" id="sidebar" aria-label="Profile and navigation">
             <img class="profile-photo" src="photo/image4.jpg" alt="Portrait of Naol Dessalegn Dejene"
                 width="138" height="138" loading="eager" />
-            <h1>Naol Dessalegn Dejene </h1>
-            <div class="role">Postdoctoral Researcher </div>
+            <h1>Naol Dessalegn Dejene, PhD</h1>
+            <div class="role">Postdoctoral Researcher</div>
             <div class="keywords">
                 Metal Additive Manufacturing<br />
                 Machine Learning · Materials Engineering
@@ -1390,10 +1469,14 @@
                 ===================================================== -->
                 <section id="home" class="content-section is-active" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
                     <div class="stat-row">
-                        <div class="stat-card"><strong>15</strong><span>Peer-reviewed publications</span></div>
-                        <div class="stat-card"><strong>L-PBF / DED</strong><span>Primary process expertise</span></div>
-                        <div class="stat-card"><strong>3</strong><span>Countries · NO / ET / KR</span></div>
-                        <div class="stat-card"><strong>2025+</strong><span>Postdoctoral research</span></div>
+                        <div class="stat-card"><strong id="stat-papers">15</strong><span>Publications</span></div>
+                        <div class="stat-card"><strong id="stat-citations" class="is-loading">—</strong><span>Total citations <small class="stat-source">Semantic Scholar</small></span></div>
+                        <div class="stat-card"><strong id="stat-hindex" class="is-loading">—</strong><span>h-index <small class="stat-source">Semantic Scholar</small></span></div>
+                        <div class="stat-card"><strong id="stat-years">5+</strong><span>Years research-active</span></div>
+                    </div>
+                    <div class="citations-note" id="citations-note" aria-live="polite">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        <span>Citation metrics load live from <a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">Semantic Scholar</a> — numbers may differ slightly from Google Scholar.</span>
                     </div>
 
                     <div class="grid-2 mb-3">
@@ -1427,11 +1510,11 @@
                                 </div>
                             </div>
                             <div class="grid-5">
-                                <div class="focus-card"><i class="bi bi-boxes" aria-hidden="true"></i><h4>Metal Additive Manufacturing</h4><p>L-PBF, DED, process optimization, defect control.</p></div>
+                                <div class="focus-card"><i class="bi bi-boxes" aria-hidden="true"></i><h4>Metal Additive Manufacturing</h4><p>L-PBF, DED, WAAM, process optimization, defect control.</p></div>
                                 <div class="focus-card"><i class="bi bi-cpu" aria-hidden="true"></i><h4>Machine Learning</h4><p>Predictive modeling, optimization, feature importance.</p></div>
                                 <div class="focus-card"><i class="bi bi-eyedropper" aria-hidden="true"></i><h4>Materials Characterization</h4><p>SEM, EBSD, XRD, mechanical testing, microstructure.</p></div>
                                 <div class="focus-card"><i class="bi bi-recycle" aria-hidden="true"></i><h4>Sustainable Manufacturing</h4><p>Powder reuse, repair, remanufacturing, lifecycle thinking.</p></div>
-                                <div class="focus-card"><i class="bi bi-pc-display" aria-hidden="true"></i><h4>Computational Modeling</h4><p> FEA, digital-twin support.</p></div>
+                                <div class="focus-card"><i class="bi bi-pc-display" aria-hidden="true"></i><h4>Computational Modeling</h4><p>CFD, FEA, thermal simulation, digital-twin support.</p></div>
                             </div>
                         </div>
                     </div>
@@ -2093,6 +2176,177 @@
                     showSection(hash, false);
                 }
             });
+        })();
+    </script>
+
+    <!-- ============================================================
+         CITATION METRICS — Semantic Scholar (free, no API key)
+         Pulls live citation counts for every publication using its DOI,
+         updates the home stat cards, injects a "Cited N×" badge under
+         each paper, and computes the h-index from the result set.
+         Cached in localStorage for 24h so the API isn't hammered.
+    ============================================================= -->
+    <script>
+        (function () {
+            'use strict';
+
+            const CACHE_KEY = 'nd-citations-v1';
+            const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
+            const API_URL = 'https://api.semanticscholar.org/graph/v1/paper/batch?fields=citationCount,title,year';
+
+            // Collect DOIs from existing publication markup (no manual list to maintain)
+            const pubItems = Array.from(document.querySelectorAll('#pub-list .pub-item'));
+            const itemsByDoi = new Map();
+            const dois = [];
+
+            pubItems.forEach(item => {
+                const doiLink = item.querySelector('.doi-link');
+                if (!doiLink) return;
+                const match = doiLink.href.match(/doi\.org\/(.+)$/);
+                if (!match) return;
+                const doi = decodeURIComponent(match[1]).trim();
+                dois.push(doi);
+                itemsByDoi.set(doi, item);
+            });
+
+            if (dois.length === 0) return;
+
+            // -----------------------------------------------------
+            // Cache helpers
+            // -----------------------------------------------------
+            function readCache() {
+                try {
+                    const raw = localStorage.getItem(CACHE_KEY);
+                    if (!raw) return null;
+                    const obj = JSON.parse(raw);
+                    if (!obj.timestamp || (Date.now() - obj.timestamp) > CACHE_TTL_MS) return null;
+                    return obj.data;
+                } catch (e) {
+                    return null;
+                }
+            }
+
+            function writeCache(data) {
+                try {
+                    localStorage.setItem(CACHE_KEY, JSON.stringify({
+                        timestamp: Date.now(),
+                        data: data
+                    }));
+                } catch (e) { /* localStorage may be disabled — silently ignore */ }
+            }
+
+            // -----------------------------------------------------
+            // Fetch from Semantic Scholar batch endpoint
+            // -----------------------------------------------------
+            async function fetchCitations() {
+                const cached = readCache();
+                if (cached) return cached;
+
+                try {
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ ids: dois.map(d => 'DOI:' + d) })
+                    });
+                    if (!response.ok) throw new Error('HTTP ' + response.status);
+                    const data = await response.json();
+                    writeCache(data);
+                    return data;
+                } catch (e) {
+                    console.warn('[citations] Semantic Scholar fetch failed:', e);
+                    return null;
+                }
+            }
+
+            // -----------------------------------------------------
+            // Apply data to the DOM
+            // -----------------------------------------------------
+            function computeHIndex(counts) {
+                // h-index = largest h such that h papers have ≥ h citations each
+                const sorted = counts.slice().sort((a, b) => b - a);
+                let h = 0;
+                for (let i = 0; i < sorted.length; i++) {
+                    if (sorted[i] >= i + 1) h = i + 1;
+                    else break;
+                }
+                return h;
+            }
+
+            function applyCitations(data) {
+                const elCitations = document.getElementById('stat-citations');
+                const elHIndex = document.getElementById('stat-hindex');
+                const elPapers = document.getElementById('stat-papers');
+                const elNote = document.getElementById('citations-note');
+
+                // Fallback if data is missing
+                if (!data || !Array.isArray(data)) {
+                    [elCitations, elHIndex].forEach(el => {
+                        if (!el) return;
+                        el.textContent = '—';
+                        el.classList.remove('is-loading');
+                    });
+                    if (elNote) {
+                        elNote.innerHTML = '<i class="bi bi-info-circle" aria-hidden="true"></i> <span>Live citation metrics are temporarily unavailable. See <a href="https://scholar.google.com/citations?user=c89CbOYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> for current counts.</span>';
+                    }
+                    return;
+                }
+
+                let totalCitations = 0;
+                let indexedPapers = 0;
+                const counts = [];
+
+                data.forEach((paper, idx) => {
+                    if (!paper || paper.citationCount == null) return;
+                    const doi = dois[idx];
+                    const item = itemsByDoi.get(doi);
+                    if (!item) return;
+
+                    const count = paper.citationCount;
+                    totalCitations += count;
+                    indexedPapers++;
+                    counts.push(count);
+
+                    // Inject "Cited N×" badge after the DOI link
+                    const doiLink = item.querySelector('.doi-link');
+                    if (doiLink && !item.querySelector('.citation-badge')) {
+                        const badge = document.createElement('span');
+                        badge.className = 'citation-badge';
+                        badge.title = 'Citations indexed by Semantic Scholar';
+                        badge.innerHTML = '<i class="bi bi-quote" aria-hidden="true"></i> Cited ' + count + '×';
+                        doiLink.insertAdjacentElement('afterend', badge);
+                        // Trigger CSS transition
+                        requestAnimationFrame(() => badge.classList.add('is-visible'));
+                    }
+                });
+
+                if (elCitations) {
+                    elCitations.textContent = totalCitations.toLocaleString();
+                    elCitations.classList.remove('is-loading');
+                }
+                if (elHIndex) {
+                    elHIndex.textContent = computeHIndex(counts);
+                    elHIndex.classList.remove('is-loading');
+                }
+                if (elPapers && indexedPapers > 0) {
+                    // Show indexed-paper count if it differs from the static value
+                    elPapers.textContent = pubItems.length;
+                }
+
+                // Update the note with a timestamp + indexed paper count
+                if (elNote) {
+                    const date = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+                    elNote.innerHTML =
+                        '<i class="bi bi-check-circle-fill" aria-hidden="true"></i> ' +
+                        '<span>' + indexedPapers + ' of ' + pubItems.length + ' papers indexed on ' +
+                        '<a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">Semantic Scholar</a>' +
+                        ' · updated ' + date + ' · numbers may differ from Google Scholar.</span>';
+                }
+            }
+
+            // -----------------------------------------------------
+            // Go
+            // -----------------------------------------------------
+            fetchCitations().then(applyCitations);
         })();
     </script>
 </body>
