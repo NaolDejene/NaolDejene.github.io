@@ -113,52 +113,55 @@
         }
 
         .social-row {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            padding: 16px 0 20px;
+            display: block;
+            padding: 16px 10px 20px;
+            text-align: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         }
 
-        .social-row a {
-            width: 36px;
-            height: 36px;
-            display: inline-flex;
-            align-items: center;
+        .profile-links {
+            display: flex;
             justify-content: center;
-            border-radius: 12px;
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.14);
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px 7px;
+            font-size: 0.82rem;
+            line-height: 1.6;
+        }
+
+        .profile-links a {
+            color: #d8e9ff;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 650;
             transition: 0.2s ease;
         }
 
-        .social-row a i,
-        .social-row a strong,
-        .social-row a span {
-            font-size: 1.02rem;
-            line-height: 1;
-            font-weight: 800;
-        }
-
-        .social-row a img {
-            width: 18px;
-            height: 18px;
-            display: block;
-        }
-
-        .social-row a:hover {
+        .profile-links a:hover {
             color: #ffffff;
-            background: var(--blue);
-            transform: translateY(-2px);
-            text-decoration: none;
+            text-decoration-thickness: 2px;
         }
 
-        .social-row a.linkedin:hover { background: #0a66c2; border-color: #0a66c2; }
-        .social-row a.scholar:hover { background: #4285f4; border-color: #4285f4; }
-        .social-row a.researchgate:hover { background: #00ccbb; border-color: #00ccbb; }
-        .social-row a.orcid:hover { background: #a6ce39; border-color: #a6ce39; }
-        .social-row a.email:hover { background: #475569; border-color: #475569; }
+        .profile-links .separator {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .email-text-link {
+            margin-top: 8px;
+            font-size: 0.78rem;
+            line-height: 1.35;
+        }
+
+        .email-text-link a {
+            color: #9fcbff;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .email-text-link a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
 
         .nav-menu {
             margin-top: 18px;
@@ -846,22 +849,19 @@
                 Materials Engineering
             </div>
 
-            <div class="social-row" aria-label="Professional links">
-                <a class="linkedin" href="https://www.linkedin.com/in/naoldessalegncontact1" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn profile">
-                    <img src="https://cdn.simpleicons.org/linkedin/ffffff" alt="LinkedIn" />
-                </a>
-                <a class="scholar" href="https://scholar.google.com/citations?user=c89CbOYAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar profile">
-                    <img src="https://cdn.simpleicons.org/googlescholar/ffffff" alt="Google Scholar" />
-                </a>
-                <a class="researchgate" href="https://www.researchgate.net/profile/Naol-Dejene" target="_blank" rel="noopener" title="ResearchGate" aria-label="ResearchGate profile">
-                    <img src="https://cdn.simpleicons.org/researchgate/ffffff" alt="ResearchGate" />
-                </a>
-                <a class="orcid" href="https://orcid.org/0000-0001-5949-8243" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID profile">
-                    <img src="https://cdn.simpleicons.org/orcid/ffffff" alt="ORCID" />
-                </a>
-                <a class="email" href="mailto:naol.mech2013@gmail.com" title="Email" aria-label="Send email">
-                    <i class="bi bi-envelope-fill"></i>
-                </a>
+            <div class="social-row" aria-label="Professional profile links">
+                <div class="profile-links">
+                    <a href="https://orcid.org/0000-0001-5949-8243" target="_blank" rel="noopener">ORCID</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.linkedin.com/in/naoldessalegncontact1" target="_blank" rel="noopener">LinkedIn</a>
+                    <span class="separator">|</span>
+                    <a href="https://scholar.google.com/citations?user=c89CbOYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.researchgate.net/profile/Naol-Dejene" target="_blank" rel="noopener">ResearchGate</a>
+                </div>
+                <div class="email-text-link">
+                    <a href="mailto:naol.mech2013@gmail.com">naol.mech2013@gmail.com</a>
+                </div>
             </div>
 
             <nav class="nav-menu" aria-label="Main navigation">
